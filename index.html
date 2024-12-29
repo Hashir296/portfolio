@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashir's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #34495e;
+            padding: 8px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        header .logo h1 {
+            color: #ecf0f1;
+            font-size: 40px;
+            margin-left: 20px;
+            margin-top: 20px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        header nav ul {
+            list-style: none;
+            float: right;
+            margin-right: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        header nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #fff;
+            background-color: #2c3e50;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 80px 0;
+            background-color: #ecf0f1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        #hero {
+            background: url('6.avif') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        #hero h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        #hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .btn {
+            background-color: #bdc3c7;
+            padding: 12px 25px;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        #about {
+            background-color: #ffffff;
+            color: #2c3e50;
+        }
+
+        #about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #about p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #about .bio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 30px;
+        }
+
+        #about .bio img {
+            width: 220px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #bdc3c7;
+            object-fit: cover;
+        }
+
+        #about .bio .text {
+            max-width: 600px;
+        }
+
+        #portfolio {
+            background-color: #ffffff;
+            padding: 80px 0;
+            color: #2c3e50;
+        }
+
+        #portfolio h2 {
+            font-size: 40px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        .project:hover .overlay {
+            opacity: 1;
+        }
+
+        .project .overlay h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project .overlay p {
+            font-size: 16px;
+        }
+
+        #contact {
+            background-color: #ffffff;
+            padding: 80px 0;
+            color: #2c3e50;
+        }
+
+        #contact h2 {
+            font-size: 40px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: #2c3e50;
+            margin: 0 20px;
+            font-size: 30px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #bdc3c7;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0%;
+            width: 100%;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            #portfolio h2, #about h2, #contact h2 {
+                font-size: 30px;
+            }
+
+            .social-links a {
+                font-size: 25px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Hashir's Portfolio</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <div>
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my work and projects</p>
+        <a href="#portfolio" class="btn">See My Work</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="bio">
+            <img src="2.jpg" alt="Hashir's Picture">
+            <div class="text">
+                <p>Hello! I'm Hashir, a passionate web designer, developer, and trader. I specialize in creating beautiful, responsive, and user-friendly websites. With a focus on clean, modern design, I aim to deliver high-quality web solutions that meet both client needs and user expectations.</p>
+                <p>In addition to my expertise in web design and development, I am also actively pursuing a Bachelor of Computer Science at Air University, Islamabad. Over the years, I have honed my skills in various areas of web development, including front-end and back-end technologies, while balancing my academic and professional pursuits.</p>
+                <p>Beyond web development, I have a keen interest in trading, where I apply analytical and problem-solving skills to navigate complex market dynamics. My commitment to continuous learning and staying updated with industry trends drives me to excel in every project and endeavor I undertake.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="container">
+        <h2>My Work</h2>
+
+        <!-- Web Projects -->
+        <h3 style="text-align:center; margin-bottom:20px;">Web Design Projects</h3>
+        <div class="projects">
+            <div class="project">
+                <img src="10.png" alt="Project 1">
+                <div class="overlay">
+                    <h3>Go Travel</h3>
+                    <p>Go Trip is your gateway to unforgettable travel adventures.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="9.png" alt="Project 2">
+                <div class="overlay">
+                    <h3>Color Palette Generator</h3>
+                    <p> A color palette generator creates harmonious color schemes for design projects.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="11.png" alt="Project 3">
+                <div class="overlay">
+                    <h3>Sweet Crumbs Bakery</h3>
+                    <p>
+                        Freshly baked delights, made with love and served warm.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trading Achievements -->
+        <h3 style="text-align:center; margin:50px 0 20px;">Trading Achievements</h3>
+        <div class="projects">
+            <div class="project">
+                <img src="7.jpg" alt="Trading Achievement 1">
+                <div class="overlay">
+                    <h3>Algorithmic Trading Expertise</h3>
+                    <p>Mastered the art of using algorithmic strategies to execute trades efficiently, minimizing risks and maximizing returns in volatile markets.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="8.jpg" alt="Trading Achievement 2">
+                <div class="overlay">
+                    <h3>Expert in Market Analysis</h3>
+                    <p>Specialized in analyzing stocks, forex, and crypto markets to identify trends, manage risks, and maximize returns effectively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="container" style="text-align: center;">
+        <h2 style="font-size: 40px; color: #2c3e50; margin-bottom: 30px;">Get In Touch</h2>
+
+        <!-- WhatsApp and Email on two lines -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-bottom: 40px;">
+            <a href="https://wa.me/qr/ES4IGWOLLSD2F1" target="_blank" style="color: #2c3e50; font-size: 30px; display: flex; align-items: center; transition: color 0.3s;">
+                <i class="fab fa-whatsapp" style="font-size: 30px;"></i>
+                <span style="margin-left: 10px; font-size: 16px;">+92 303 3644692</span>
+            </a>
+            <a href="mailto:hashir.ch296@gmail.com" target="_blank" style="color: #2c3e50; font-size: 30px; display: flex; align-items: center; transition: color 0.3s;">
+                <i class="fas fa-envelope" style="font-size: 30px;"></i>
+                <span style="margin-left: 10px; font-size: 16px;">hashir.ch296@gmail.com</span>
+            </a>
+        </div>
+
+        <!-- Social Media links in one row -->
+        <div class="social-links" style="display: flex; justify-content: center; gap: 20px;">
+            <a href="https://www.instagram.com/hashir.ch296?igsh=Z2c5bGE2NzZ4azlt" target="_blank" style="color: #2c3e50; font-size: 30px; transition: color 0.3s;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hashir-ch-0ab349325/" target="_blank" style="color: #2c3e50; font-size: 30px; transition: color 0.3s;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/hashir.ch.399" target="_blank" style="color: #2c3e50; font-size: 30px; transition: color 0.3s;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://discord.com/channels/1097501578891628586/1097501579726291015" target="_blank" style="color: #2c3e50; font-size: 30px; transition: color 0.3s;">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <p>&copy; 2024 Hashir Hameed | All rights reserved.</p>
+</footer>
+
+</body>
+</html>
