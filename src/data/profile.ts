@@ -114,7 +114,7 @@ export const profile = {
     },
     {
       title: "SocialSphere AI",
-      url: "#",
+      url: "https://social-sphere-frontend-peach.vercel.app/login",
       description:
         "Full-stack social networking product with live chat, stories, personalized feeds, AI caption helpers, and moderation tools. Built with MERN, Socket.IO for realtime messaging, JWT authentication, and Cloudinary for media uploads.",
       highlights: [

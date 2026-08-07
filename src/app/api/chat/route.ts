@@ -85,7 +85,8 @@ async function askGemini(
   const genAI = new GoogleGenerativeAI(apiKey);
   const errors: string[] = [];
 
-  for (const modelName of [...new Set(MODELS)]) {
+  const uniqueModels = Array.from(new Set(MODELS));
+  for (const modelName of uniqueModels) {
     try {
       const model = genAI.getGenerativeModel({
         model: modelName,
