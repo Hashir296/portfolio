@@ -15,8 +15,8 @@ export const profile = {
   socials: {
     github: "https://github.com/Hashir296",
     linkedin: "https://www.linkedin.com/in/m-hashir-hameed-0ab349325/",
-    instagram: "https://www.instagram.com/hashir.ch296/",
     facebook: "https://www.facebook.com/hashir.ch.399",
+    instagram: "https://www.instagram.com/hashir.ch296/",
   },
   summary:
     "Junior MERN Stack Developer with 1+ year of professional experience building and shipping full-stack production applications for international clients. Delivered 10+ projects spanning telehealth, enterprise resource planning, and social platforms using React, Next.js, Node.js, Express, and MongoDB. Comfortable owning a feature end-to-end: designing REST APIs, implementing JWT authentication, and building responsive, production-ready UIs. Currently expanding into AI-integrated features (content moderation, personalization, sentiment analysis) across recent projects.",

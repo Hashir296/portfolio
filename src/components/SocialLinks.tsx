@@ -37,8 +37,8 @@ function IconFacebook({ size = 18 }: { size?: number }) {
 const items = [
   { label: "GitHub", href: profile.socials.github, Icon: IconGitHub },
   { label: "LinkedIn", href: profile.socials.linkedin, Icon: IconLinkedIn },
-  { label: "Instagram", href: profile.socials.instagram, Icon: IconInstagram },
   { label: "Facebook", href: profile.socials.facebook, Icon: IconFacebook },
+  { label: "Instagram", href: profile.socials.instagram, Icon: IconInstagram },
 ];
 
 export default function SocialLinks({
