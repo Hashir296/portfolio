@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import { profile } from "@/data/profile";
+import { WEB3FORMS_PUBLIC_KEY } from "@/lib/web3forms";
 
 export const runtime = "nodejs";
 
@@ -54,7 +55,7 @@ async function sendWithWeb3Forms(payload: {
   subject: string;
   message: string;
 }) {
-  const key = process.env.WEB3FORMS_ACCESS_KEY?.trim();
+  const key = WEB3FORMS_PUBLIC_KEY;
   if (!key) return null;
 
   const res = await fetch("https://api.web3forms.com/submit", {
@@ -135,28 +136,12 @@ export async function POST(req: Request) {
 
     const payload = { name, email, subject, message };
     const errors: string[] = [];
-    const hasWeb3 = Boolean(process.env.WEB3FORMS_ACCESS_KEY?.trim());
-    const hasGmail = Boolean(process.env.GMAIL_APP_PASSWORD?.trim());
 
-    // Prefer Web3Forms (free + instant to Gmail), then Gmail App Password, then FormSubmit
     try {
       const w3 = await sendWithWeb3Forms(payload);
       if (w3) return Response.json({ ok: true, via: "web3forms" });
     } catch (e) {
       errors.push(e instanceof Error ? e.message : "Web3Forms failed");
-      // If Web3Forms is configured, don't silently fall back — surface the real error
-      if (hasWeb3 && !hasGmail) {
-        return Response.json(
-          {
-            ok: false,
-            error:
-              errors[0] ||
-              "Web3Forms rejected the message. Confirm your email at web3forms.com and check spam for a verification link.",
-            details: errors,
-          },
-          { status: 502 }
-        );
-      }
     }
 
     try {
@@ -166,26 +151,21 @@ export async function POST(req: Request) {
       errors.push(e instanceof Error ? e.message : "Gmail failed");
     }
 
-    // Only use FormSubmit when no primary provider is configured
-    if (!hasWeb3 && !hasGmail) {
-      try {
-        await sendWithFormSubmit(payload);
-        return Response.json({
-          ok: true,
-          via: "formsubmit",
-          note: "If this is the first message, check Gmail for a FormSubmit activation link and confirm it.",
-        });
-      } catch (e) {
-        errors.push(e instanceof Error ? e.message : "FormSubmit failed");
-      }
+    try {
+      await sendWithFormSubmit(payload);
+      return Response.json({
+        ok: true,
+        via: "formsubmit",
+        note: "If this is the first message, confirm the FormSubmit email in your inbox.",
+      });
+    } catch (e) {
+      errors.push(e instanceof Error ? e.message : "FormSubmit failed");
     }
 
     return Response.json(
       {
         ok: false,
-        error:
-          errors[0] ||
-          "Email not configured. Add WEB3FORMS_ACCESS_KEY (free at web3forms.com) or GMAIL_APP_PASSWORD in .env.local, then restart the server.",
+        error: errors[0] || "Could not send message. Please email me directly.",
         details: errors,
       },
       { status: 502 }

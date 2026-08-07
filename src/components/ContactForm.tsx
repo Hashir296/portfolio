@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { profile } from "@/data/profile";
+import { WEB3FORMS_PUBLIC_KEY } from "@/lib/web3forms";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -14,7 +15,7 @@ export default function ContactForm() {
   const [error, setError] = useState("");
 
   async function sendViaWeb3Forms() {
-    const access_key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
+    const access_key = WEB3FORMS_PUBLIC_KEY;
     if (!access_key) return null;
 
     const res = await fetch("https://api.web3forms.com/submit", {
