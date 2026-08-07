@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #f5f1e8;
+  --color-forest: #1f3d2b;
+  --color-charcoal: #1a1a1a;
+  --color-gold: #b08d57;
+  --color-burgundy: #6e2c2c;
+  --color-ivory-line: #e4dcc8;
+  --mood-bg: var(--color-cream);
+  --mood-accent: var(--color-gold);
+  --mood-ink: var(--color-charcoal);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--mood-bg);
+  color: var(--mood-ink);
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 80;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: rgba(176, 141, 87, 0.28);
+}
+
+.container-editorial {
+  width: min(1200px, calc(100% - 10rem));
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .container-editorial {
+    width: min(1200px, calc(100% - 2rem));
+  }
+}
+
+.hairline {
+  height: 1px;
+  background: var(--color-ivory-line);
+}
+
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 4.5rem;
+  line-height: 0.85;
+  padding-right: 0.55rem;
+  padding-top: 0.25rem;
+  color: var(--color-forest);
+}
+
+.icon-thin svg {
+  stroke-width: 1;
+}
+
+.marquee-track {
+  animation: marquee-x 38s linear infinite;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
