@@ -11,7 +11,7 @@ export const profile = {
   phoneHref: "+923033644692",
   github: "https://github.com/Hashir296",
   githubHandle: "Hashir296",
-  portfolio: "https://hashir296.github.io/portfolio/",
+  portfolio: "https://portfoliohashir.vercel.app/",
   socials: {
     github: "https://github.com/Hashir296",
     linkedin: "https://www.linkedin.com/in/m-hashir-hameed-0ab349325/",
