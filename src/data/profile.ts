@@ -73,7 +73,7 @@ export const profile = {
     {
       role: "MERN Stack Developer Intern",
       company: "Softelio",
-      period: "Jul 2026 – Present",
+      period: "Jul 2026 – Sep 2026",
       type: "Remote",
       points: [
         "Building and maintaining web applications using the MERN stack alongside senior developers, following Agile practices.",
@@ -85,21 +85,22 @@ export const profile = {
     {
       title: "Every Ion",
       url: "https://everyion.com",
+      ctaLabel: "Visit client site",
       description:
-        "Production telehealth platform for international clients. I built and shipped clinical-service UI and an admin dashboard so teams can manage appointments, service catalogs, and daily operations from one place — with a clean, responsive experience for staff and patients.",
+        "Live client website for an international telehealth company — everyion.com is in production and indexed on Google. I built and shipped clinical-service UI and an admin dashboard so teams can manage appointments, service catalogs, and daily operations from one place — with a clean, responsive experience for staff and patients.",
       highlights: [
-        "Live production telehealth product",
+        "Client’s live site (everyion.com) — indexed on Google",
         "Clinical frontend + admin operations dashboard",
         "Next.js UI with PHP/MySQL backend services",
       ],
       seoDescription:
-        "Every Ion telehealth web application by M Hashir Hameed — Next.js, PHP, MySQL, Tailwind CSS. Production clinical services and admin dashboard for international healthcare clients.",
+        "Every Ion telehealth web application by M Hashir Hameed — live client site at everyion.com. Next.js, PHP, MySQL, Tailwind CSS. Production clinical services and admin dashboard for international healthcare clients.",
       stack: ["PHP", "MySQL", "Next.js", "Tailwind"],
       image: "/projects/Everyion.webp",
     },
     {
       title: "Nexora ERP",
-      url: "#",
+      url: "https://nexora-erp-vm3t.vercel.app/",
       description:
         "AI-assisted enterprise resource planning system on the MERN stack. Modules span HR, CRM, payroll, inventory, finance, sales, and project management, with role-based access control and realtime notifications so teams stay aligned across departments.",
       highlights: [
@@ -128,19 +129,34 @@ export const profile = {
       image: "/projects/SocialsphereAI.webp",
     },
     {
-      title: "Ashford Travel House",
-      url: "#",
+      title: "VoiceForge",
+      url: "https://voiceover-drab.vercel.app/",
       description:
-        "Luxury travel booking experience with secure JWT login, MongoDB data models, and REST APIs for destinations, packages, and reservations. Focused on a premium booking flow that feels calm, clear, and conversion-ready.",
+        "Studio-grade AI voice-over web app on the MERN stack. Write a script, pick from 40+ neural voices, generate audio, mix music on a timeline, and sync voice-over to video — then export. AI also drafts ads, YouTube narration, and podcast intros before sending them to TTS.",
       highlights: [
-        "JWT-secured traveler accounts",
-        "REST APIs for packages and reservations",
-        "Premium booking UX for luxury travel",
+        "40+ neural voices across English, Urdu, Hindi, Arabic, and more",
+        "In-browser timeline editor: trim, fade, mix music, remove silence",
+        "Video voice-over plus AI script generation with credit-based usage",
       ],
       seoDescription:
-        "Ashford Travel House by M Hashir Hameed — luxury travel booking app with MERN stack, JWT authentication, MongoDB models, and reservation REST APIs.",
-      stack: ["MongoDB", "Express", "React", "Node.js", "JWT"],
-      image: "/projects/Ashford.webp",
+        "VoiceForge by M Hashir Hameed — AI voice-over studio on the MERN stack with neural TTS, timeline editing, video sync, and AI script generation.",
+      stack: ["MongoDB", "Express", "React", "Node.js", "AI"],
+      image: "/projects/VoiceForge.png",
+    },
+    {
+      title: "Lumen",
+      url: "https://lumen-sandy-kappa.vercel.app/login",
+      description:
+        "ChatGPT-style AI assistant built on the MERN stack. Unlimited conversations with your preferred model, long-term memory that follows the account across devices, plus vision and voice — image understanding, generation, and spoken interaction kept private to the user.",
+      highlights: [
+        "Multi-model chat with account-scoped privacy",
+        "Long-term memory that stays with you on every device",
+        "Image understanding & generation, plus voice",
+      ],
+      seoDescription:
+        "Lumen by M Hashir Hameed — ChatGPT-like MERN AI assistant with long-term memory, vision, voice, and private multi-model conversations.",
+      stack: ["MongoDB", "Express", "React", "Node.js", "AI"],
+      image: "/projects/Lumen.png",
     },
     {
       title: "Personal Finance Analyzer",
@@ -156,6 +172,21 @@ export const profile = {
         "Personal Finance Analyzer by M Hashir Hameed — desktop investment analysis tool using Java Swing and C++ with OOP and data structures.",
       stack: ["Java", "C++", "OOP", "DSA"],
       image: "/projects/OAPFA.webp",
+    },
+    {
+      title: "Ashford Travel House",
+      url: "#",
+      description:
+        "Luxury travel booking experience with secure JWT login, MongoDB data models, and REST APIs for destinations, packages, and reservations. Focused on a premium booking flow that feels calm, clear, and conversion-ready.",
+      highlights: [
+        "JWT-secured traveler accounts",
+        "REST APIs for packages and reservations",
+        "Premium booking UX for luxury travel",
+      ],
+      seoDescription:
+        "Ashford Travel House by M Hashir Hameed — luxury travel booking app with MERN stack, JWT authentication, MongoDB models, and reservation REST APIs.",
+      stack: ["MongoDB", "Express", "React", "Node.js", "JWT"],
+      image: "/projects/Ashford.webp",
     },
   ],
   education: [
@@ -195,6 +226,8 @@ export const profile = {
       "JWT authentication REST API developer",
       "AI content moderation personalization",
       "Every Ion telehealth",
+      "VoiceForge AI voice over",
+      "Lumen AI assistant",
       "AlphaNUIX Technologies",
       "Softelio intern",
       "Air University Islamabad CS",

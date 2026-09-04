@@ -34,8 +34,9 @@ export default function Projects() {
               <span className="italic text-[#E8C97A]"> work.</span>
             </h2>
             <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-cream/75">
-              Detailed case work across telehealth, enterprise ERP, social products, luxury travel,
-              and desktop finance — built with MERN, Next.js, PHP, and systems languages.
+              Detailed case work across telehealth, enterprise ERP, social products, AI chat,
+              voice studio, luxury travel, and desktop finance — built with MERN, Next.js, PHP,
+              and systems languages.
             </p>
           </motion.div>
 
@@ -82,14 +83,24 @@ export default function Projects() {
             whileHover={{ y: -6, borderColor: "rgba(232,201,122,0.55)" }}
           >
             <div className="flex aspect-[16/10] w-full items-center justify-center bg-[#0f1c14]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={project.image}
-                alt={project.seoDescription}
-                itemProp="image"
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>            <div className="flex flex-1 flex-col p-5 md:p-6">
+              {project.image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={project.image}
+                  alt={project.seoDescription}
+                  itemProp="image"
+                  className="max-h-full max-w-full object-contain"
+                />
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
+                  <p className="text-[11px] font-semibold tracking-[0.2em] text-[#E8C97A]">
+                    {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <p className="font-display text-2xl text-cream/85">{project.title}</p>
+                </div>
+              )}
+            </div>
+            <div className="flex flex-1 flex-col p-5 md:p-6">
               <p className="text-[11px] font-semibold tracking-[0.2em] text-[#E8C97A]">
                 {String(i + 1).padStart(2, "0")}
               </p>
@@ -118,7 +129,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              {project.url !== "#" && (
+              {project.url !== "#" ? (
                 <a
                   href={project.url}
                   itemProp="url"
@@ -126,8 +137,15 @@ export default function Projects() {
                   rel="noreferrer"
                   className="icon-thin mt-auto inline-flex items-center gap-1.5 pt-4 text-sm text-[#E8C97A] hover:text-cream"
                 >
-                  Visit live project <ExternalLink size={14} />
+                  {"ctaLabel" in project && project.ctaLabel
+                    ? project.ctaLabel
+                    : "Visit live project"}
+                  <ExternalLink size={14} />
                 </a>
+              ) : (
+                <p className="mt-auto pt-4 text-sm tracking-wide text-[#E8C97A]/80">
+                  Live soon
+                </p>
               )}
             </div>
           </motion.article>

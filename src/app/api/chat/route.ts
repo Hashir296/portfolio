@@ -21,7 +21,7 @@ FACTS — IDENTITY
 - Title: ${profile.title}
 - Location: ${profile.location}
 - Experience: 1+ year professional
-- Projects delivered: 10+ (telehealth, ERP, social platforms, travel, finance)
+- Projects delivered: 10+ (telehealth, ERP, social platforms, AI chat, AI voice over, travel, finance)
 - Email: ${profile.email}
 - Phone: ${profile.phone}
 - GitHub: ${profile.socials.github}
@@ -57,7 +57,7 @@ FACTS — PROJECTS
 ${profile.projects
   .map(
     (p, i) =>
-      `${i + 1}. ${p.title}${p.url !== "#" ? ` (${p.url})` : ""}\n   ${p.description}\n   Highlights: ${p.highlights.join("; ")}\n   Stack: ${p.stack.join(", ")}`
+      `${i + 1}. ${p.title}${p.url !== "#" ? ` (${p.url})` : " — Live soon"}\n   ${p.description}\n   Highlights: ${p.highlights.join("; ")}\n   Stack: ${p.stack.join(", ")}`
   )
   .join("\n\n")}
 
@@ -65,7 +65,7 @@ FACTS — EDUCATION
 ${profile.education.map((e) => `- ${e.degree} — ${e.school} (${e.period})`).join("\n")}
 
 AI / SPECIAL INTERESTS
-- Expanding into AI-integrated features: content moderation, personalization, sentiment analysis across recent projects (e.g. SocialSphere AI, Nexora ERP AI-assisted modules).
+- Expanding into AI-integrated features: conversational AI (Lumen), neural voice-over (VoiceForge), content moderation, personalization, and sentiment analysis across recent projects (e.g. SocialSphere AI, Nexora ERP AI-assisted modules).
 `;
 
 const MODELS = [

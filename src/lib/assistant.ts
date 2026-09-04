@@ -35,7 +35,7 @@ export function answerAboutHashir(question: string): string {
     const body = profile.projects
       .map(
         (p, i) =>
-          `${i + 1}. ${p.title}${p.url !== "#" ? ` (${p.url})` : ""}\n   ${p.description}\n   Stack: ${p.stack.join(", ")}`
+          `${i + 1}. ${p.title}${p.url !== "#" ? ` (${p.url})` : " — Live soon"}\n   ${p.description}\n   Stack: ${p.stack.join(", ")}`
       )
       .join("\n\n");
     return `Hashir has delivered 10+ projects. Highlights:\n\n${body}`;
@@ -66,7 +66,7 @@ export function answerAboutHashir(question: string): string {
   const projectHit = profile.projects.find((p) => q.includes(p.title.toLowerCase().split(" ")[0]!));
   if (projectHit) {
     return `${projectHit.title}: ${projectHit.description}\nHighlights: ${projectHit.highlights.join("; ")}\nStack: ${projectHit.stack.join(", ")}${
-      projectHit.url !== "#" ? `\nLive: ${projectHit.url}` : ""
+      projectHit.url !== "#" ? `\nLive: ${projectHit.url}` : "\nLive soon."
     }`;
   }
 
