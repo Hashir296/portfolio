@@ -21,7 +21,7 @@ FACTS — IDENTITY
 - Title: ${profile.title}
 - Location: ${profile.location}
 - Experience: 1+ year professional
-- Projects delivered: 10+ (telehealth, ERP, social platforms, AI chat, AI voice over, travel, finance)
+- Projects delivered: 10+ (telehealth, ERP, social platforms, AI chat, AI voice over, Dribbble clone, Onyx open source, travel, finance)
 - Email: ${profile.email}
 - Phone: ${profile.phone}
 - GitHub: ${profile.socials.github}
@@ -65,7 +65,7 @@ FACTS — EDUCATION
 ${profile.education.map((e) => `- ${e.degree} — ${e.school} (${e.period})`).join("\n")}
 
 AI / SPECIAL INTERESTS
-- Expanding into AI-integrated features: conversational AI (Lumen), neural voice-over (VoiceForge), content moderation, personalization, and sentiment analysis across recent projects (e.g. SocialSphere AI, Nexora ERP AI-assisted modules).
+- Expanding into AI-integrated features: conversational AI (Lumen), neural voice-over (VoiceForge), open-source Onyx (GitHub connector / RAG chat), content moderation, personalization, and sentiment analysis across recent projects (e.g. SocialSphere AI, Nexora ERP AI-assisted modules).
 `;
 
 const MODELS = [

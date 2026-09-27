@@ -35,8 +35,8 @@ export default function Projects() {
             </h2>
             <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-cream/75">
               Detailed case work across telehealth, enterprise ERP, social products, AI chat,
-              voice studio, luxury travel, and desktop finance — built with MERN, Next.js, PHP,
-              and systems languages.
+              voice studio, open source, design communities, luxury travel, and desktop finance —
+              built with MERN, Next.js, PHP, and systems languages.
             </p>
           </motion.div>
 

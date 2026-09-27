@@ -159,6 +159,37 @@ export const profile = {
       image: "/projects/Lumen.png",
     },
     {
+      title: "Dribbble",
+      url: "https://dribbble-swart.vercel.app",
+      description:
+        "Full-stack Dribbble-style design community on the MERN stack. Designers can register, upload shots, like and follow, search work, and manage a dashboard — with JWT auth, MongoDB models, and a React/Vite frontend that covers shots, profiles, messages, and hiring pages.",
+      highlights: [
+        "Shot feed, upload, likes, follows, and designer profiles",
+        "JWT authentication with Express + MongoDB APIs",
+        "Live on Vercel — dribbble-swart.vercel.app",
+      ],
+      seoDescription:
+        "Dribbble clone by M Hashir Hameed — MERN design community with shot uploads, likes, follows, JWT auth, and a React/Vite frontend.",
+      stack: ["MongoDB", "Express", "React", "Node.js", "JWT"],
+      image: "/projects/Dribbble.png",
+    },
+    {
+      title: "Onyx",
+      url: "https://github.com/Hashir296/onyx",
+      ctaLabel: "View open-source work",
+      description:
+        "Open-source contribution to Onyx (onyx-dot-app/onyx) — a self-hosted AI chat platform with RAG, connectors, and multi-LLM support. I worked in the Python codebase on the GitHub connector, adding indexing for pull-request and issue discussion comments so those threads are searchable in chat.",
+      highlights: [
+        "Open-source contribution to Onyx (Python + Next.js AI platform)",
+        "GitHub connector: index PR and issue discussion comments",
+        "RAG / AI chat with team knowledge from connected apps",
+      ],
+      seoDescription:
+        "Onyx open-source contribution by M Hashir Hameed — GitHub connector work indexing PR and issue discussion comments on the Onyx AI chat and RAG platform.",
+      stack: ["Python", "Next.js", "RAG", "Open Source"],
+      image: "/projects/Onyx.png",
+    },
+    {
       title: "Personal Finance Analyzer",
       url: "#",
       description:
@@ -228,6 +259,8 @@ export const profile = {
       "Every Ion telehealth",
       "VoiceForge AI voice over",
       "Lumen AI assistant",
+      "Dribbble MERN clone",
+      "Onyx open source contribution",
       "AlphaNUIX Technologies",
       "Softelio intern",
       "Air University Islamabad CS",
