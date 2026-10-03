@@ -85,6 +85,7 @@ export const profile = {
     {
       title: "Every Ion",
       url: "https://everyion.com",
+      group: "client",
       ctaLabel: "Visit client site",
       description:
         "Live client website for an international telehealth company — everyion.com is in production and indexed on Google. I built and shipped clinical-service UI and an admin dashboard so teams can manage appointments, service catalogs, and daily operations from one place — with a clean, responsive experience for staff and patients.",
@@ -99,8 +100,25 @@ export const profile = {
       image: "/projects/Everyion.webp",
     },
     {
+      title: "FinGuard",
+      url: "https://fmafd.vercel.app",
+      group: "built",
+      description:
+        "Corporate finance desk with a fraud-risk engine beside the books. Role-based staff (owners, accountants, fraud analysts) share one MongoDB ledger covering invoices, budgets, AP/AR, vendors, claims, and investigations — plus a dedicated fraud-detection and AI-insights workspace. Built as a live MERN product (FinGuard).",
+      highlights: [
+        "Live finance + fraud detection platform (fmafd.vercel.app)",
+        "Invoices, budgets, AP/AR, vendors, claims, and investigations",
+        "Role-based JWT access for owners, accountants, and fraud analysts",
+      ],
+      seoDescription:
+        "FinGuard by M Hashir Hameed — MERN finance management and fraud detection desk with role-based access, invoices, budgets, AP/AR, and AI insights.",
+      stack: ["MongoDB", "Express", "React", "Node.js", "JWT"],
+      image: "/projects/FMAFD.png",
+    },
+    {
       title: "Nexora ERP",
-      url: "https://nexora-erp-vm3t.vercel.app/",
+      url: "https://nexora-erp-blush.vercel.app/login",
+      group: "built",
       description:
         "AI-assisted enterprise resource planning system on the MERN stack. Modules span HR, CRM, payroll, inventory, finance, sales, and project management, with role-based access control and realtime notifications so teams stay aligned across departments.",
       highlights: [
@@ -176,6 +194,7 @@ export const profile = {
     {
       title: "Onyx",
       url: "https://github.com/Hashir296/onyx",
+      group: "oss",
       ctaLabel: "View open-source work",
       description:
         "Open-source contribution to Onyx (onyx-dot-app/onyx) — a self-hosted AI chat platform with RAG, connectors, and multi-LLM support. I worked in the Python codebase on the GitHub connector, adding indexing for pull-request and issue discussion comments so those threads are searchable in chat.",
@@ -257,6 +276,7 @@ export const profile = {
       "JWT authentication REST API developer",
       "AI content moderation personalization",
       "Every Ion telehealth",
+      "FinGuard finance fraud detection",
       "VoiceForge AI voice over",
       "Lumen AI assistant",
       "Dribbble MERN clone",

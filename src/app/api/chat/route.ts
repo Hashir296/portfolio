@@ -21,7 +21,7 @@ FACTS — IDENTITY
 - Title: ${profile.title}
 - Location: ${profile.location}
 - Experience: 1+ year professional
-- Projects delivered: 10+ (telehealth, ERP, social platforms, AI chat, AI voice over, Dribbble clone, Onyx open source, travel, finance)
+- Projects delivered: 10+ (telehealth, finance + fraud detection, ERP, social platforms, AI chat, AI voice over, Dribbble clone, Onyx open source, travel)
 - Email: ${profile.email}
 - Phone: ${profile.phone}
 - GitHub: ${profile.socials.github}
