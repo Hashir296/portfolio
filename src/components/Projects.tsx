@@ -136,8 +136,8 @@ export default function Projects() {
                   rel="noreferrer"
                   className="icon-thin mt-auto inline-flex items-center gap-1.5 pt-4 text-sm text-[#E8C97A] hover:text-cream"
                 >
-                  {"ctaLabel" in project && project.ctaLabel
-                    ? project.ctaLabel
+                  {project.url.includes("github.com")
+                    ? "View on GitHub"
                     : "Visit live project"}
                   <ExternalLink size={14} />
                 </a>
