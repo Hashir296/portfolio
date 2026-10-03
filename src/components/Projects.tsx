@@ -81,7 +81,7 @@ export default function Projects() {
             transition={{ delay: Math.min(i * 0.05, 0.3), duration: 0.5 }}
             whileHover={{ y: -6, borderColor: "rgba(232,201,122,0.55)" }}
           >
-            <div className="flex aspect-[16/10] w-full items-center justify-center bg-[#0f1c14]">
+            <div className="relative flex aspect-[16/10] w-full items-center justify-center bg-[#0f1c14]">
               {project.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -98,6 +98,11 @@ export default function Projects() {
                   <p className="font-display text-2xl text-cream/85">{project.title}</p>
                 </div>
               )}
+              {"group" in project && project.group === "client" ? (
+                <span className="absolute right-3 top-3 rounded-full bg-[#E8C97A] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-charcoal">
+                  Client
+                </span>
+              ) : null}
             </div>
             <div className="flex flex-1 flex-col p-5 md:p-6">
               <p className="text-[11px] font-semibold tracking-[0.2em] text-[#E8C97A]">
