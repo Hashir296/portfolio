@@ -19,14 +19,14 @@ export const profile = {
     instagram: "https://www.instagram.com/hashir.ch296/",
   },
   summary:
-    "Junior MERN Stack Developer with 1+ year of professional experience building and shipping full-stack production applications for international clients. Delivered 10+ projects spanning telehealth, enterprise resource planning, and social platforms using React, Next.js, Node.js, Express, and MongoDB. Comfortable owning a feature end-to-end: designing REST APIs, implementing JWT authentication, and building responsive, production-ready UIs. Currently expanding into AI-integrated features (content moderation, personalization, sentiment analysis) across recent projects.",
+    "Junior MERN Stack Developer with 1.5+ years of professional experience building and shipping full-stack production applications for international clients. Delivered 10+ projects spanning telehealth, enterprise resource planning, and social platforms using React, Next.js, Node.js, Express, and MongoDB. Comfortable owning a feature end-to-end: designing REST APIs, implementing JWT authentication, and building responsive, production-ready UIs. Currently expanding into AI-integrated features (content moderation, personalization, sentiment analysis) across recent projects.",
   about: [
-    "Junior MERN Stack Developer with 1+ year of professional experience building and shipping full-stack production applications for international clients. Delivered 10+ projects spanning telehealth, enterprise resource planning, and social platforms using React, Next.js, Node.js, Express, and MongoDB. Comfortable owning a feature end-to-end: designing REST APIs, implementing JWT authentication, and building responsive, production-ready UIs. Currently expanding into AI-integrated features (content moderation, personalization, sentiment analysis) across recent projects.",
+    "Junior MERN Stack Developer with 1.5+ years of professional experience building and shipping full-stack production applications for international clients. Delivered 10+ projects spanning telehealth, enterprise resource planning, and social platforms using React, Next.js, Node.js, Express, and MongoDB. Comfortable owning a feature end-to-end: designing REST APIs, implementing JWT authentication, and building responsive, production-ready UIs. Currently expanding into AI-integrated features (content moderation, personalization, sentiment analysis) across recent projects.",
     "Based in Islamabad, I’m completing a BS in Computer Science at Air University while working as a MERN Stack Developer at AlphaNUIX Technologies and as a MERN Stack Developer Intern at Softelio.",
     "I’m open to developer roles and freelance projects.",
   ],
   highlights: [
-    { label: "Experience", value: "1+ year" },
+    { label: "Experience", value: "1.5+ years" },
     { label: "Projects", value: "10+ shipped" },
     { label: "Focus", value: "MERN + Next.js" },
     { label: "Based in", value: "Islamabad" },
@@ -61,7 +61,7 @@ export const profile = {
     {
       role: "MERN Stack Developer",
       company: "AlphaNUIX Technologies",
-      period: "Jul 2025 – Present",
+      period: "Jul 2025 – Sep 2026",
       type: "On-site → Remote",
       points: [
         "Delivered 5+ live production features for international clients across full-stack MERN and Next.js applications, from requirements to deployment.",
@@ -262,7 +262,7 @@ export const profile = {
   seo: {
     title: "M Hashir Hameed | Junior MERN Stack Developer in Islamabad",
     description:
-      "Junior MERN Stack Developer with 1+ year experience shipping 10+ full-stack projects for international clients — telehealth, ERP, and social platforms with React, Next.js, Node.js, Express, and MongoDB. Hire M Hashir Hameed in Islamabad, Pakistan.",
+      "Junior MERN Stack Developer with 1.5+ years experience shipping 10+ full-stack projects for international clients — telehealth, ERP, and social platforms with React, Next.js, Node.js, Express, and MongoDB. Hire M Hashir Hameed in Islamabad, Pakistan.",
     keywords: [
       "M Hashir Hameed",
       "Hashir Hameed portfolio",

@@ -20,8 +20,8 @@ export function answerAboutHashir(question: string): string {
       : `${profile.name} is a ${profile.title} based in ${profile.location}.\n\n${profile.summary}\n\nContact: ${profile.email} | ${profile.phone}`;
   }
 
-  if (/(year|experience|1\+|one year|kitna)/i.test(q) && !/(project)/i.test(q)) {
-    return `${profile.name} has 1+ year of professional experience shipping full-stack production apps for international clients (AlphaNUIX Technologies; Softelio intern).`;
+  if (/(year|experience|1\+|1\.5|one year|kitna)/i.test(q) && !/(project)/i.test(q)) {
+    return `${profile.name} has 1.5+ years of professional experience shipping full-stack production apps for international clients (AlphaNUIX Technologies; Softelio intern).`;
   }
 
   if (/(skill|stack|tech|toolkit|technologies)/i.test(q)) {

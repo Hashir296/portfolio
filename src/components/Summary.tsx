@@ -33,7 +33,7 @@ export default function Summary() {
             <img
               id="portrait-settled"
               src={profile.portrait}
-              alt={`${profile.name} — ${profile.title} in ${profile.location}. 1+ year building full-stack MERN and Next.js apps for international clients.`}
+              alt={`${profile.name} — ${profile.title} in ${profile.location}. 1.5+ years building full-stack MERN and Next.js apps for international clients.`}
               itemProp="image"
               className="h-full w-full object-cover opacity-0 transition-opacity duration-200"
             />

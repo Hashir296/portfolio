@@ -20,7 +20,7 @@ FACTS — IDENTITY
 - Full name: ${profile.name} (goes by ${profile.shortName})
 - Title: ${profile.title}
 - Location: ${profile.location}
-- Experience: 1+ year professional
+- Experience: 1.5+ years professional
 - Projects delivered: 10+ (telehealth, finance + fraud detection, ERP, social platforms, AI chat, AI voice over, Dribbble clone, Onyx open source, travel)
 - Email: ${profile.email}
 - Phone: ${profile.phone}
